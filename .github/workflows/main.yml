@@ -2,12 +2,12 @@ name: Extraction Bor-Bi
 on:
   workflow_dispatch:
 jobs:
-  unzip:
+  decompresser:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Unzip project
-        run: unzip "Bor-Bi 1.1v 3.zip" -d .
+      - name: Decompresser le projet
+        run: unzip projet.zip -d .
       - name: Commit files
         run: |
           git config --global user.name "GitHub Action"
