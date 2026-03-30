@@ -1,4 +1,4 @@
-name: Extraction Bor-Bi
+nname: Extraction Bor-Bi
 
 on:
   workflow_dispatch:
