@@ -1,17 +1,21 @@
 name: Extraction Bor-Bi
+
 on:
   workflow_dispatch:
+
 jobs:
-  decompresser:
+  unzipper:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Decompresser le projet
+
+      - name: Décompresser le projet
         run: unzip projet.zip -d .
-      - name: Commit files
+
+      - name: Fichiers de commit
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
+          git config --global user.name "Actions"
+          git config --global user.email "actions@github.com"
           git add .
           git commit -m "Extraction automatique"
           git push
